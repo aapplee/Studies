@@ -1,0 +1,24 @@
+class Character {
+  constructor(name, weapon) {
+    this.name = name;
+    this.weapon = weapon;
+  }
+  attack() {
+    return 'atack with ' + this.weapon
+  }
+}
+
+class Ninja extends Character { 
+  constructor(name, weapon, kind) {
+    super(name, weapon) 
+    this.kind = kind;
+  }
+  attack() {
+    console.log(super.attack());
+    return `I am ${this.name} the ${this.kind}, dodge my ${this.weapon} !`
+  }
+}
+
+const ninja1 = new Ninja('Zuo', 'shurikens', 'ninja');
+ninja1.attack()
+
