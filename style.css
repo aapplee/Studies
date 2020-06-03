@@ -7,7 +7,7 @@ body{
 
 .container{
     margin: 3rem;
-    margin-top: -5%;
+/*     margin-top: -5%; */
     padding: 2rem;
     border-radius: 20px;
     text-align: center;
@@ -24,17 +24,7 @@ body{
     margin-top: 0;
 }
 
-.d-none{
-  display: none;
-}
-
-.pic{
-    width: 100%;
-    border-radius: 10%;
-}
-
 .city-form{
-    margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -43,32 +33,45 @@ body{
 
 .city {
     width: 100%;
-    height: 2rem;
+    height: 3rem;
     text-align: center;
+
     border: 1px solid cadetblue;
-    border-radius: 16px;
+    border-radius: 30px;
+    outline: none;
+
     color: cadetblue;
-    font-weight: 600;
     opacity: 0.9;
+    font-size: 15px;
+    font-weight: 600;
     font-family: Lucida Sans Unicode;
 }
 
-.small{display: none;}
-.smaller{display: none;}
+.d-none{display: none;}
 
-@media screen and (max-width: 435px) {
-    .normal{
-        display: none;
-    }
-    .small{display: block;}
-}
-
-@media screen and (max-width: 387px) {
-    .normal, .small{
-        display: none;
-    }
-    .smaller{display: block;}
-}
+.pic{width: 100%; border-radius: 10%;}
 
 .city-weather{font-size: 2rem;}
 .weather-temp{font-size: 1.5rem;}
+
+.card, .details{
+    animation-name: moveDown;
+    animation-duration: 1.2s;
+    display: block;
+}
+
+@keyframes moveDown{
+
+    0%{
+        opacity: 0;
+        transform: translateY(-200px);
+    }
+
+    60%{
+        opacity: 0.4;
+    }
+
+    100%{
+        opacity: 0.7;
+        transform: translateY(0);
+    }
